@@ -59,6 +59,12 @@ const variableName: type = value;
 - declare type after `:`
 - ` = value` is optional
 
+However, best practice for primitive types (number, string, boolean) tends to be using `type inference`:
+``` ts
+let userID = 123232.22;
+```
+Seems familiar right? It's basic javascript - but later on if you try to assign this a non-number value, TS will give you errors
+
 ## New keywords
 - union
 - interface
