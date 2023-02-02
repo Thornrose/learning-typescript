@@ -70,6 +70,13 @@ Seems familiar right? It's basic javascript - but later on if you try to assign 
 - you usually want to avoid using `any`
 - using `noImplicitAny` (in config?) "to flag any implicit `any` as an error."
 
+## Functions
+- always define types for variables passed to functions
+- seems like return value is inferred? UPDATE: it is, but there's more to it if you want to typecheck return values
+- as anticipated, `let/const` changing to `var` CAN be addressed in config
+- 
+
+
 ## New keywords
 - union
 - interface
@@ -77,7 +84,7 @@ Seems familiar right? It's basic javascript - but later on if you try to assign 
 ## Notes
 
 - when you want to "run" the typescript, use command `tsc` will generate corresponding JS file.
-  - if you use `let` (or `const`?) in TS, the JS file it creates will be written as `var`, i wonder if there is a config option about that
+  - if you use `let` (or `const`?) in TS, the JS file it creates will be written as `var`, i wonder if there is a config option about that? UPDATE: yes, there is
 
 - closing vscode and opening again, you may not see the same TS errors? weird behaviour there.
 
