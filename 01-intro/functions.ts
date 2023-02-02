@@ -27,4 +27,32 @@ signUpUser('Cheever', 'chee@e.e', 'pw', true);
 loginUser("CA", "CA@CA.CA");
 
 
+
+// return values
+
+function addThree(num: number): number {
+  // return "hello" // will get an error!
+  return num + 3;
+}
+
+let otherValue = addThree(2);
+
+
+
+// better way to write funcs
+
+// utilizing UNION type
+function getValue(myVal: number): boolean | string {
+  if (myVal > 5) {
+    return true
+  }
+  return "200 OK"
+}
+
+// syntax for declaring return val type on arrow function. will throw error if no return value is provided
+const getHello = (s: string): string => {
+  return ""
+}
+
+
 export {}

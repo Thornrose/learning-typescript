@@ -65,6 +65,8 @@ let userID = 123232.22;
 ```
 Seems familiar right? It's basic javascript - but later on if you try to assign this a non-number value, TS will give you errors
 
+- another note: is `;` at the end of lines still best practice? I feel like it is
+
 ### 'any' keyword
 - documentation is nice about it, but "any" is a way to avoid typechecking. it is not a type itself.
 - you usually want to avoid using `any`
@@ -74,8 +76,16 @@ Seems familiar right? It's basic javascript - but later on if you try to assign 
 - always define types for variables passed to functions
 - seems like return value is inferred? UPDATE: it is, but there's more to it if you want to typecheck return values
 - as anticipated, `let/const` changing to `var` CAN be addressed in config
-- 
 
+return values: syntax for declaring function return value type is as follows:
+
+``` ts
+function addThree(num: number): number {
+  // return "hello" // will get an error!
+  return num + 3;
+}
+```
+in function declaration, this will give an error on the `return` line if the value being returned is of invalid type. it will NOT show errors in places where the function is being used. which makes sense, it's cathing it here so it essentially is stopped at the point where it needs to be addressed at the root of the problem
 
 ## New keywords
 - union
