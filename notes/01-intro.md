@@ -65,6 +65,11 @@ let userID = 123232.22;
 ```
 Seems familiar right? It's basic javascript - but later on if you try to assign this a non-number value, TS will give you errors
 
+### 'any' keyword
+- documentation is nice about it, but "any" is a way to avoid typechecking. it is not a type itself.
+- you usually want to avoid using `any`
+- using `noImplicitAny` (in config?) "to flag any implicit `any` as an error."
+
 ## New keywords
 - union
 - interface
