@@ -34,4 +34,46 @@ function createBetterUser(user: User): User {
 // will complain if you don't follow the format
 createBetterUser({name: "", email: "", isActive: true});
 
+
+// readonly keyword, optional ? marker
+type UserTwo = {
+  readonly _id: string
+  name: string
+  email: string;
+  isActive: boolean;
+  cardDetails?: number // ? indicates property is optional
+}
+
+type cardNumber = {
+  cardnumber: string
+}
+
+type cardDate = {
+  carddate: string
+}
+
+// combining types to make new type
+type cardDetails = cardNumber & cardDate & {
+  cvv: number
+}
+
+let myCard: cardDetails = {
+  cardnumber: "12121",
+  carddate: "121291",
+  cvv: 123
+}
+
+let myUser: UserTwo = {
+  _id: "1232",
+  name: "CA",
+  email: "c@c.ca",
+  isActive: false
+}
+
+myUser.email = "Ca@a.ac";
+
+// because property was declared as read only, it cannot be changed later
+// still another case where once compiled, javascript will do it anyway:
+// myUser._id = "ohhh";
+
 export {}
