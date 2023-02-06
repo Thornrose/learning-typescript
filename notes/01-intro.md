@@ -115,6 +115,47 @@ type User = {
 ```
 there are examples of how it is "legal to do something like `type str = string` where you simply create a new name of a type and assign it to a pre-existing type - likely not common, could see it being used if you want to write shorthand, but probably more work than it is worth.
 
+
+### combining types: example
+
+use the `&` symbol to combine types
+
+``` ts
+type cardNumber = {
+  cardnumber: string
+}
+
+type cardDate = {
+  carddate: string
+}
+
+// combining types to make new type
+type cardDetails = cardNumber & cardDate & {
+  cvv: number
+}
+```
+
+## optional & readonly properties in objects
+
+take a look at this object: 
+``` ts
+type UserTwo = {
+  readonly _id: string
+  name: string
+  email: string;
+  isActive: boolean;
+  cardDetails?: number
+}
+```
+- the `readonly` keyword before `_id` indicates that after the initial value for _id is declared, it can never be changed
+- the `?` after `cardDetails` indicates that this object could be created without this property - it is optional
+
+## Arrays
+
+documentation is simple enough but says a lot:
+
+> "To specify the type of an array like `[1, 2, 3]`, you can use the syntax `number[];` this syntax works for any type (e.g. `string[]` is an array of strings, and so on). You may also see this written as `Array<number>`, which means the same thing."
+
 ## New keywords
 - union
 - interface
@@ -124,6 +165,6 @@ there are examples of how it is "legal to do something like `type str = string` 
 - when you want to "run" the typescript, use command `tsc` will generate corresponding JS file.
   - if you use `let` (or `const`?) in TS, the JS file it creates will be written as `var`, i wonder if there is a config option about that? UPDATE: yes, there is
 
-- closing vscode and opening again, you may not see the same TS errors? weird behaviour there.
+- closing vscode and opening again, you may not see the same TS errors? weird behaviour there. UPDATE: adding `export {}` to the end of a file has nut been explained yet, but makes error lines more consistent?
 
 - typescript main website has a playground where youcan test code - settings / TS Config available here as well 
