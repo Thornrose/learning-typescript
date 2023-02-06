@@ -156,9 +156,11 @@ documentation is simple enough but says a lot:
 
 > "To specify the type of an array like `[1, 2, 3]`, you can use the syntax `number[];` this syntax works for any type (e.g. `string[]` is an array of strings, and so on). You may also see this written as `Array<number>`, which means the same thing."
 
-## New keywords
-- union
-- interface
+## Union type
+
+defined as one of multiple types - still preferrable over "any"
+
+## Interface
 
 ## Notes
 
