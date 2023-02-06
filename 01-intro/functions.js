@@ -38,3 +38,17 @@ function getValue(myVal) {
 var getHello = function (s) {
     return "";
 };
+// const heroes = ['thor', 'spiderman', 'ironman'];
+var heroes = [1, 2, 3];
+// defining return value of array method even!
+heroes.map(function (hero) {
+    return "hero is ".concat(hero);
+});
+// void return value
+function consoleError(errmsg) {
+    console.log(errmsg);
+}
+// never return value
+function handleError(errmsg) {
+    throw new Error(errmsg);
+}

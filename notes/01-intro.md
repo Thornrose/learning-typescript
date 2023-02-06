@@ -103,6 +103,17 @@ heroes.map((hero): string => {
 ```
 here, while the type of `hero` can be pulled from the array, you still want to declare the type for the return values.
 
+## Type Aliases
+- for objects, this seems like a common and powerful took, where you can create objects / define types that follow a certain format. Like a variable but only holding type definitions.
+
+``` ts
+type User = {
+  name: string;
+  email: string;
+  isActive: boolean
+}
+```
+there are examples of how it is "legal to do something like `type str = string` where you simply create a new name of a type and assign it to a pre-existing type - likely not common, could see it being used if you want to write shorthand, but probably more work than it is worth.
 
 ## New keywords
 - union
