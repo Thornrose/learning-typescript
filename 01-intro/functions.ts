@@ -19,14 +19,10 @@ let loginUser = (name: string, email: string, isPaid: boolean = true) => {
 
 }
 
-
 let myValue = addTwo(5); // example of how function return value can still cause problems, more on this topic to come!
 getUpper('hi')
 signUpUser('Cheever', 'chee@e.e', 'pw', true);
-
 loginUser("CA", "CA@CA.CA");
-
-
 
 // return values
 
@@ -36,8 +32,6 @@ function addThree(num: number): number {
 }
 
 let otherValue = addThree(2);
-
-
 
 // better way to write funcs
 
@@ -54,7 +48,6 @@ const getHello = (s: string): string => {
   return ""
 }
 
-
 // const heroes = ['thor', 'spiderman', 'ironman'];
 const heroes = [1, 2, 3];
 
@@ -63,5 +56,16 @@ heroes.map((hero): string => {
   return `hero is ${hero}`
 })
 
+
+// void return value
+function consoleError(errmsg: string): void{
+  console.log(errmsg);
+
+}
+
+// never return value
+function handleError(errmsg: string): never{
+  throw new Error(errmsg);
+}
 
 export {}

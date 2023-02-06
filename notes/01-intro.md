@@ -85,7 +85,24 @@ function addThree(num: number): number {
   return num + 3;
 }
 ```
-in function declaration, this will give an error on the `return` line if the value being returned is of invalid type. it will NOT show errors in places where the function is being used. which makes sense, it's cathing it here so it essentially is stopped at the point where it needs to be addressed at the root of the problem
+in function declaration, this will give an error on the `return` line if the value being returned is of invalid type. it will NOT show errors in places where the function is being used. which makes sense, it's cathing it here so it essentially is stopped at the point where it needs to be addressed at the root of the problem.
+
+It is best practice that if the function will *not* have a return value, you explicitly delare the return value as `: void`.
+
+another situation (example given with error handing) is the `never` keyword - the function will never return a value, because when that function runs it will throw an error/intentional crash. more info in docs:
+- "The never type represents values which are never observed. In a return type, this means that the function throws an exception or terminates execution of the program."
+
+you can also do something like this with pre-existing methods, like Array.map for example:
+
+``` ts
+const heroes = [1, 2, 3];
+
+heroes.map((hero): string => {
+  return `hero is ${hero}`
+})
+```
+here, while the type of `hero` can be pulled from the array, you still want to declare the type for the return values.
+
 
 ## New keywords
 - union
