@@ -160,6 +160,9 @@ documentation is simple enough but says a lot:
 
 defined as one of multiple types - still preferrable over "any"
 
+## Tuples
+ - type of specialized array
+
 ## Interface
 
 ## Notes
