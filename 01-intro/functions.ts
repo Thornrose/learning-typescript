@@ -55,4 +55,13 @@ const getHello = (s: string): string => {
 }
 
 
+// const heroes = ['thor', 'spiderman', 'ironman'];
+const heroes = [1, 2, 3];
+
+// defining return value of array method even!
+heroes.map((hero): string => {
+  return `hero is ${hero}`
+})
+
+
 export {}
