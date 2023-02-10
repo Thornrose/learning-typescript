@@ -18,6 +18,28 @@ newUser[1] = "no more email";
 // newUser.push(true); // should be invalid
 
 
+// ENUMS
+
+// example of having choices:
+// const AISLE = 0
+// const MIDDLE = 1
+// const WINDOW = 2
+
+// if (seat === AISLE) {
+//   // ...
+// }
+
+// enums provide a good restricted multiple choice.
+// default values for below act like array indexes, based on value of first - auto incrementing 
+// if you set first val as string, it does break the rest - until you go back to numbers
+enum SeatChoice {
+  AISLE = "aisle",
+  MIDDLE = "middle",
+  WINDOW = "window",
+  EMERGENCY = 0
+}
+
+const hcSeat = SeatChoice.WINDOW
 
 
 

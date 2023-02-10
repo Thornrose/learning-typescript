@@ -161,7 +161,12 @@ documentation is simple enough but says a lot:
 defined as one of multiple types - still preferrable over "any"
 
 ## Tuples
- - type of specialized array
+- type of specialized array
+
+## Enums
+- used to set specific values within a parameter - another type of object notation? 
+- checking how it is compiled to js is very interesting - sets up an IIFE (see notes below)
+- by prepending `enum` with `const` will not generate any code 
 
 ## Interface
 
@@ -173,3 +178,9 @@ defined as one of multiple types - still preferrable over "any"
 - closing vscode and opening again, you may not see the same TS errors? weird behaviour there. UPDATE: adding `export {}` to the end of a file has nut been explained yet, but makes error lines more consistent?
 
 - typescript main website has a playground where youcan test code - settings / TS Config available here as well 
+
+- new concept: **IIFE** (Immediately Invoked Function Expression)
+  - runs as soon as defined, so don't have to call later.
+  - design pattern
+  - aka "Self-Executing Anonymous Function" - maybe we have seen this before
+  - useful to avoid polluting global namespace, execute async functions, creating private and public variables and methods. good example on MDN
