@@ -152,6 +152,8 @@ type UserTwo = {
 
 ## Arrays
 
+*(at this point I started making more notes inline in the files)*
+
 documentation is simple enough but says a lot:
 
 > "To specify the type of an array like `[1, 2, 3]`, you can use the syntax `number[];` this syntax works for any type (e.g. `string[]` is an array of strings, and so on). You may also see this written as `Array<number>`, which means the same thing."
@@ -169,6 +171,8 @@ defined as one of multiple types - still preferrable over "any"
 - by prepending `enum` with `const` will not generate any code 
 
 ## Interface
+
+so I don't think this really got covered in the lesson, but i do see a use here where the param is defined in the interface, but doesn't have to be repeated in the method definition later on. so you could have similar instances of an interface where the methods are specific to that instance, but they always take the same param. can also
 
 ## Notes
 
