@@ -18,10 +18,23 @@ interface User {
   getCoupon(couponname: string): number
 }
 
-const cheever: User = {
+// reopening - usually done if interface is coming from different file, for example
+
+interface User {
+  githubToken: string
+}
+
+// extends keyword - inheritance
+interface Admin extends User {
+  role: "admin" | "ta" | "student"
+}
+
+const cheever: Admin = {
   email: "c@c.c",
   userId: 1111,
   _dbId: 5,
+  githubToken: "github",
+  role: "admin",
   startTrial: () => {
     return "trial started"
   },
@@ -32,6 +45,7 @@ const cheever: User = {
 
 // will give error if not given correct # of args.
 //cheever.getCoupon()
+
 
 
 

@@ -172,7 +172,19 @@ defined as one of multiple types - still preferrable over "any"
 
 ## Interface
 
-so I don't think this really got covered in the lesson, but i do see a use here where the param is defined in the interface, but doesn't have to be repeated in the method definition later on. so you could have similar instances of an interface where the methods are specific to that instance, but they always take the same param. can also
+so I don't think this really got covered in the lesson, but i do see a use here where the param is defined in the interface, but doesn't have to be repeated in the method definition later on. so you could have similar instances of an interface where the methods are specific to that instance, but they always take the same param.
+
+## Interface vs. Type
+
+- a big difference is `extends` vs `&`. for inheritance
+- you can add more values to interfaces - can simple write `interface` again and open the object up to add new properties. sometimes referred to as "re-opening"
+
+# Using TS in Projects
+- from command line, `tsc --init` will generate a basic tsconfig.json file. 
+- on docs website, the playground config tab has the same settings you can toggle on/off
+- typical folder structure will have directories `src` and `dist` - `src` is where you will write in typescript, when files are run / compiled, `.js` files should be generated in `dist`
+- if you are setting up a script tag in an html file, need to point to the file in `dist`, not `src`
+
 
 ## Notes
 
