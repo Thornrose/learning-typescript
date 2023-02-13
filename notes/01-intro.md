@@ -182,8 +182,10 @@ so I don't think this really got covered in the lesson, but i do see a use here 
 # Using TS in Projects
 - from command line, `tsc --init` will generate a basic tsconfig.json file. 
 - on docs website, the playground config tab has the same settings you can toggle on/off
-- typical folder structure will have directories `src` and `dist` - `src` is where you will write in typescript, when files are run / compiled, `.js` files should be generated in `dist`
+- typical folder structure will have directories `src` and `dist` - `src` is where you will write in typescript, when files are run / compiled, `.js` files should be generated in `dist` >> need to set `outDir` in `tsconfig`
+  - once you start working, run command `tsc -w` to start watch mode - will watch for any changes to `.ts` files and update `.js` files, based on tsconfig
 - if you are setting up a script tag in an html file, need to point to the file in `dist`, not `src`
+
 
 
 ## Notes
