@@ -47,6 +47,21 @@ const cheever: Admin = {
 //cheever.getCoupon()
 
 
+// in operator narrowing
+interface UserB {
+  name: string
+}
 
+interface AdminB {
+  name: string;
+  isAdmin: boolean
+}
+
+function checkAdmin(account: UserB | AdminB) {
+  if ("isAdmin" in account) {
+    return account.isAdmin
+  }
+}
+// this is typescript making use of the existing in operator from JS
 
 export {}

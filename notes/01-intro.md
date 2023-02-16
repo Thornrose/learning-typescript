@@ -255,3 +255,8 @@ there's a section of noters in the documentation about Using Type Parameters in 
 - files in project directory structure seem to already be aware of eachother even if files not required/ported into eachother. very cool
 
 - best prac (maybe) to use `;` when setting up interfaces
+
+### MORE DOCS/KEYWORDS TO LOOK INTO
+ 
+ - Narrowing, "type guards", truthy/falsy narrowing, `in` operator, instanceOf, type casting
+

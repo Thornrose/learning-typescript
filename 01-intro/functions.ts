@@ -68,4 +68,12 @@ function handleError(errmsg: string): never{
   throw new Error(errmsg);
 }
 
+// type narrowing
+function detectType(val: number | string) {
+  if (typeof val === "string") {
+    return val.toLowerCase()
+  }
+  return val + 3; // note that since we already decided what to do when val is string, TS knows that at this point it could only be number
+}
+
 export {}
