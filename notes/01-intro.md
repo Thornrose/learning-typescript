@@ -219,6 +219,20 @@ so I don't think this really got covered in the lesson, but i do see a use here 
 - on a function, allows for the type to be specified at call time vs at definition
   - can still specify for example whether we want to work with `Type` or `Type[]` - so it is still flexible
 
+let's look at an example using all of the above:
+
+``` ts
+function searchProducts<T>(products: T[]): T {
+  return products[0];
+}
+```
+again just as an example:
+  - forst we are setting up a generic type T and saying the arg passed is an array containing elements of that type.
+  - the return type though will be T, one element from the array.
+  - for the return statement, cannot return whole array, only one element. and cannot return a value that could possibly be type other than T.
+
+there's a section of noters in the documentation about Using Type Parameters in Generic Constraints - basically answhere you are using `<>` you can do all kinds of extra specification. the example tey use indicates a really cool way of restricting a parameter BASED ON data from another parameter (object keys). very cool
+
 ## Notes
 
 - when you want to "run" the typescript, use command `tsc` will generate corresponding JS file.
@@ -238,4 +252,6 @@ so I don't think this really got covered in the lesson, but i do see a use here 
 
 - concept of "protocols" in iOS development
 
-- files in project directory structure seem to already be aware of eachother even if files not "required" into eachother. very cool
+- files in project directory structure seem to already be aware of eachother even if files not required/ported into eachother. very cool
+
+- best prac (maybe) to use `;` when setting up interfaces

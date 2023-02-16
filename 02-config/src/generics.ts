@@ -39,3 +39,64 @@ interface Bottle {
 // this is where we can actually see it in action. when we CALL the method we can say what we want return value to be.
 // identityFour<number>("4") // invalid
 // identityFour<Bottle>({}) // requires object that matches type of Bottle 
+
+// with array types
+function searchProducts<T>(products: T[]): T {
+  // do some work on products array
+  const myIndex = 0;
+  return products[myIndex];
+}
+
+// with arrow function syntax: common to have comma , after T to specify it is generic and not a html tag
+const searchMoreProducts = <T,>(products: T[]): T => {
+  const myIndex = 0;
+  return products[myIndex];
+}
+
+// using type params in generic constraints
+
+interface Database {
+  connection: string;
+  username: string;
+  password: string
+}
+
+
+// can put multiple types in <>
+const anotherFunc = <T, U extends Database>(valOne:T, valTwo:U): object => {
+  return {
+    valOne,
+    valTwo
+  }
+}
+
+const db: Database = {
+  connection: "conn",
+  username: "uname",
+  password: "pass"
+}
+
+anotherFunc(3, db);
+
+
+// using generics for class creation
+interface Quiz {
+  name: string,
+  style: string
+}
+
+interface Course {
+name: string;
+author: string;
+subject: string
+
+}
+
+class ForSale<T> {
+  public cart: T[] = [];
+
+  addToCart(product: T){
+    this.cart.push(product);
+  }
+}
+// ...? feel like this could have gone further

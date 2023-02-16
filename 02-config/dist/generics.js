@@ -26,3 +26,36 @@ function identityFour(val) {
 // this is where we can actually see it in action. when we CALL the method we can say what we want return value to be.
 // identityFour<number>("4") // invalid
 // identityFour<Bottle>({}) // requires object that matches type of Bottle 
+// with array types
+function searchProducts(products) {
+    // do some work on products array
+    const myIndex = 0;
+    return products[myIndex];
+}
+// with arrow function syntax: common to have comma , after T to specify it is generic and not a html tag
+const searchMoreProducts = (products) => {
+    const myIndex = 0;
+    return products[myIndex];
+};
+// can put multiple types in <>
+const anotherFunc = (valOne, valTwo) => {
+    return {
+        valOne,
+        valTwo
+    };
+};
+const db = {
+    connection: "conn",
+    username: "uname",
+    password: "pass"
+};
+anotherFunc(3, db);
+class ForSale {
+    constructor() {
+        this.cart = [];
+    }
+    addToCart(product) {
+        this.cart.push(product);
+    }
+}
+// ...? feel like this could have gone further
