@@ -188,6 +188,36 @@ so I don't think this really got covered in the lesson, but i do see a use here 
 - in tsconfig you can set it so that if you have something with a TS error, it will not comile that line of code into the JS file. extra strict
 
 
+## public / private keywords & other shortcuts
+- setting something in a class as `private` makes it inaccessible after declaration
+- anything else is considered `public` by default
+- can use `#` to mark something private, but that's regular JS - `private` is more verbose
+  - compiled JS will not indicate any private or readonly indication
+- "access modifiers" - also `protected`. assuming: protected properties are not transferred via inheritance when extending a class
+  - almost, `private` properties and methods are not transferred
+  - `protected` allows it to be transferred via `extends`, but still not be public outside class definitions
+
+## getters & setters
+- prepend with `get` or `set`, again makes code more self documenting. don't need to have "get" in the method name
+- setter cannot return anything, or at least not have return of specific type
+
+## interface in cotext with classes
+- `implements` keyword - class implements interface, makes sure that class follows the structure. Likely good for APIs, sharing code bases etc. DEV HELPER!
+
+
+## Abstract classes
+- important distinction. 
+- cannot make objects directly out of abstract class, needs to be extended by other class first
+- help to define class that inherits it
+- can have non abstract methods / properies that can be overwritten later, but also can have abstract methods that must be implemented
+
+
+## generics
+- from docs: "building components that not only have well-defined and consistent APIs, but are also reusable."
+- generics is where the `<>` syntax comes in!
+- (most notes in generics file in 02)
+- on a function, allows for the type to be specified at call time vs at definition
+  - can still specify for example whether we want to work with `Type` or `Type[]` - so it is still flexible
 
 ## Notes
 
@@ -198,8 +228,14 @@ so I don't think this really got covered in the lesson, but i do see a use here 
 
 - typescript main website has a playground where youcan test code - settings / TS Config available here as well 
 
+
+
 - new concept: **IIFE** (Immediately Invoked Function Expression)
   - runs as soon as defined, so don't have to call later.
   - design pattern
   - aka "Self-Executing Anonymous Function" - maybe we have seen this before
   - useful to avoid polluting global namespace, execute async functions, creating private and public variables and methods. good example on MDN
+
+- concept of "protocols" in iOS development
+
+- files in project directory structure seem to already be aware of eachother even if files not "required" into eachother. very cool

@@ -6,7 +6,7 @@
 // proper syntax:
 const superHeroes: string[] = [];
 // const heroPower: number[] = [];
-// alt syntax:
+// alt syntax using generics:
 const heroPower: Array<number> = [];
 
 type User = {
