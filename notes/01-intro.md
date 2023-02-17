@@ -258,5 +258,5 @@ there's a section of noters in the documentation about Using Type Parameters in 
 
 ### MORE DOCS/KEYWORDS TO LOOK INTO
  
- - Narrowing, "type guards", truthy/falsy narrowing, `in` operator, instanceOf, type casting
+ - Narrowing, "type guards", truthy/falsy narrowing, `in` operator, instanceOf, type casting (Using Type Predicates)
 
